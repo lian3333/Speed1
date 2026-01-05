@@ -37,6 +37,5 @@ public class Board extends View {
         int height = getHeight();
         Rect dest = new Rect(-100,0,width,height);
         canvas.drawBitmap(boardBitmap,0,0,null);
-
     }
 }
