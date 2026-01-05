@@ -29,7 +29,6 @@ public class Board extends View {
         super.onSizeChanged(w,h,oldw,oldh);
         boardBitmap=Bitmap.createScaledBitmap(boardBitmap,w,h,true);
     }
-
     @Override
     protected void onDraw(@NonNull Canvas canvas) {
         super.onDraw(canvas);
