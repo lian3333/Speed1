@@ -18,7 +18,7 @@ public class Player {
     {
         this.name=name;
         deck=new ArrayList<Card>(); // קופה אישית
-        hand=new ArrayList<Card>() ;//// קלפים של שחקן
+        hand=new ArrayList<Card>() ;// קלפים של שחקן
         this.context = context;
         for (int i = 1; i <= 13; i++) {
             String resourceName = "b" + i;
@@ -61,7 +61,15 @@ public class Player {
     {
         hand.add(c);
     }
-/*public  void Draw(Canvas canvas)
+
+    public ArrayList<Card> getDeck() {
+        return deck;
+    }
+
+    public ArrayList<Card> getHand() {
+        return hand;
+    }
+    /*public  void Draw(Canvas canvas)
 {
 
 }*/

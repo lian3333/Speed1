@@ -16,14 +16,10 @@ public class Board extends View {
     private Bitmap boardBitmap;
     public Board(Context context) {
         super(context);
-        player1=new Player("israel", context);
-        player2=new Player("guy", context);
-        for (int i=1; i<=13; i++)
-        {
-            //player1.
-
-
-        }
+        player1=new Player("lian_g", context);
+        player2=new Player("lian_s", context);
+       //open1=player1.AddCard(player1.getDeck().remove(0));
+       //open2=player2.AddCard(player2.getDeck().remove(0));
         boardBitmap=BitmapFactory.decodeResource(getResources(),R.drawable.bg);
 
 
