@@ -30,11 +30,18 @@ public class Board extends View {
         boardBitmap=Bitmap.createScaledBitmap(boardBitmap,w,h,true);
     }
     @Override
+  // public void draw(Canvas canvas)
+    {
+    player1.getHand().
+    }
+    @Override
     protected void onDraw(@NonNull Canvas canvas) {
         super.onDraw(canvas);
         int width = getWidth()*7;
         int height = getHeight();
         Rect dest = new Rect(-100,0,width,height);
         canvas.drawBitmap(boardBitmap,0,0,null);
+
     }
+
 }

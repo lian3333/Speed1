@@ -45,6 +45,9 @@ public class Card extends Location
 
     @Override
     public void Draw(Canvas canvas) {
+        if (pic!=null )
+            canvas.drawBitmap(pic,getX(),getY(),null);
 
     }
+
 }
