@@ -6,13 +6,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FF8282"
     tools:context=".Setting">
 
-    <Spinner
-        android:layout_marginTop="100dp"
-        android:id="@+id/colorSpinner"
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp" />
+        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:text="Choose color"
+        android:fontFamily="serif"
+
+        />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:scrollbarSize="60dp"
+        android:layout_gravity="end"
+        >
+    </Spinner>
 
 </LinearLayout>

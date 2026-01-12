@@ -28,12 +28,30 @@ public class Board extends View {
     protected void onSizeChanged(int w, int h,int oldw, int oldh){
         super.onSizeChanged(w,h,oldw,oldh);
         boardBitmap=Bitmap.createScaledBitmap(boardBitmap,w,h,true);
+        if (!isInitialized){
+            dealCards(w,h);
+            isInitialized=true;
+
+        }
     }
-    @Override
+    private void dealCards (int screenw,int screenh){
+        player1.getDeck().clear();
+        player2.getDeck().clear();
+        for(int n=1; n<=13; n++){
+            for(int c=1; c<=2; c++)
+            {
+                player1.getDeck().add(new Card(c,n));
+            }
+        }
+
+
+
+    }
+   /* @Override
   // public void draw(Canvas canvas)
     {
     player1.getHand().
-    }
+    }*/
     @Override
     protected void onDraw(@NonNull Canvas canvas) {
         super.onDraw(canvas);

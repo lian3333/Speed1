@@ -12,12 +12,17 @@ public class Card extends Location
     private boolean isopen;
     private Bitmap pic;
 
-    public Card( Bitmap pic, int value) {
+    public Card( int color, int value) {
         super(0,0);
 
         this.pic = pic;
         this.isopen = false;
         this.value = value;
+        if (c==1) {
+        }
+        else {
+        }
+        }
 
     }
 
