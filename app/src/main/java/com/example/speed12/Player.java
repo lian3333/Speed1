@@ -20,7 +20,7 @@ public class Player {
         deck=new ArrayList<Card>(); // קופה אישית
         hand=new ArrayList<Card>() ;// קלפים של שחקן
         this.context = context;
-        for (int i = 1; i <= 13; i++) {
+     /*  for (int i = 1; i <= 13; i++) {
             String resourceName = "b" + i;
             int num = context.getResources().getIdentifier(resourceName, "drawable", context.getPackageName());
             if (num != 0) {
@@ -50,7 +50,7 @@ public class Player {
         {
             hand.add(deck.remove(0));
 
-        }
+        }*/
     }
 
     public boolean isEmptyDeck()
@@ -69,6 +69,7 @@ public class Player {
     public ArrayList<Card> getHand() {
         return hand;
     }
+    public String getName(){return name;}
     /*public  void Draw(Canvas canvas)
 {
 

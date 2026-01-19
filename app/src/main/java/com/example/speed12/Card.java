@@ -13,18 +13,16 @@ public class Card extends Location
     private Bitmap pic;
 
     public Card( int color, int value) {
-        super(0,0);
+        super(0, 0);
 
         this.pic = pic;
         this.isopen = false;
         this.value = value;
-        if (c==1) {
-        }
-        else {
-        }
-        }
 
     }
+
+
+
 
 
     public Bitmap getPic() {
