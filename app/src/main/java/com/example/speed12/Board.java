@@ -22,6 +22,9 @@ Board extends View {
     private boolean isInitialized = false;
     private Bitmap kupa1, kupa2;
     private int xmid,ymid;
+    private Bitmap boardBitmap;
+
+
 
     // בנאי יחיד - מצוין לשימוש שלך ב-Start Activity
     public Board(Context context) {
@@ -32,7 +35,7 @@ Board extends View {
         player2 = new Player("Player 2", context);
         this.kupa1=BitmapFactory.decodeResource(getResources(),R.drawable.backcard);
         this.kupa2=BitmapFactory.decodeResource(getResources(),R.drawable.backcard);
-
+        boardBitmap=BitmapFactory.decodeResource(getResources(),R.drawable.bg);
     }
 
     // הפונקציה הזו רצה אוטומטית כשהמסך נטען ויודעים את הגודל שלו
@@ -61,6 +64,7 @@ Board extends View {
             for (int copy = 0; copy < 4; copy++) {
                 deck.add(new Card(,value));
             }*/
+
         }
         Collections.shuffle(deck);
 
@@ -111,6 +115,11 @@ Board extends View {
     @Override
     protected void onDraw(@NonNull Canvas canvas) {
         super.onDraw(canvas);
+        super.onDraw(canvas);
+        int width = getWidth()*7;
+        int height = getHeight();
+        Rect dest = new Rect(-100,0,width,height);
+        canvas.drawBitmap(boardBitmap,0,0,null);
 
         //  צבע רקע ורוד למשחק קלפים
         canvas.drawColor(Color.parseColor("#f781b8"));
@@ -135,7 +144,26 @@ Board extends View {
     }
 
 
-    /* ******************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
     private Player player1,player2;
     Card open1,open2;
 
@@ -154,9 +182,6 @@ Board extends View {
     protected void onSizeChanged(int w, int h,int oldw, int oldh){
         super.onSizeChanged(w,h,oldw,oldh);
         boardBitmap=Bitmap.createScaledBitmap(boardBitmap,w,h,true);
-        if (!isInitialized){
-            dealCards(w,h);
-            isInitialized=true;
 
         }
     }

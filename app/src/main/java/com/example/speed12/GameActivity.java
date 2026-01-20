@@ -1,5 +1,6 @@
 package com.example.speed12;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -15,6 +16,7 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         //setContentView(R.layout.activity_game);
+        Intent intnt=getIntent();
         Board board = new Board(this);
         setContentView(board);
     }
